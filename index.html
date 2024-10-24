@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Jogos Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Loja de Jogos Online</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Jogos</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Minha Conta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="featured">
+            <h2>Destaques</h2>
+            <div class="game-list" id="game-list"></div>
+        </section>
+        <footer>
+            <p>&copy; Loja de Jogos Online</p>
+        </footer>
+    </main>
+
+    <!-- Modal de Compra -->
+    <div class="modal" id="purchase-modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <p id="modal-price"></p>
+            <h3>Forma de Pagamento</h3>
+            <select id="payment-method">
+                <option value="credit-card">Cartão de Crédito</option>
+                <option value="paypal">PayPal</option>
+            </select>
+            <div id="credit-card-info" style="display: none;">
+                <input type="text" placeholder="Número do Cartão" id="card-number" />
+                <input type="text" placeholder="Nome no Cartão" id="card-name" />
+                <input type="text" placeholder="Data de Validade (MM/AA)" id="card-expiry" />
+                <input type="text" placeholder="CVV" id="card-cvv" />
+            </div>
+            <button id="confirm-purchase">Confirmar Compra</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
